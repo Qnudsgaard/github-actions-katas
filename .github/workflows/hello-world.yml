@@ -6,7 +6,6 @@ jobs:
     steps:
       - name: my-step
         run: echo "Hello World!"
-  Test:
-    runs-on: ubuntu-latest
     steps:
-      run: /ci/unit-test-app.sh
+      - name: test
+        run: /ci/unit-test-app.sh
