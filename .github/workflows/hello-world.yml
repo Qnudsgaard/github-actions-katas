@@ -26,11 +26,6 @@ jobs:
         with:
           name: code
           path: .
-      - name: Upload JAR
-        uses: actions/download-artifact@v2
-        with:
-          name: code
-          path: app/build/libs/app-0.1-all.jar
       - name: Build with Gradle
         run: chmod +x ci/build-app.sh && ci/build-app.sh
       - name: Test with Gradle
